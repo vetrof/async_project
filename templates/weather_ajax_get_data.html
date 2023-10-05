@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Погода в Астане</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                // Выполняем AJAX-запрос после загрузки страницы
+                $.ajax({
+                    url: '',
+                    success: function(data) {
+                        // Извлекаем данные о погоде из JSON-ответа
+                        var temperature = data.weather.location.name;
+                        var description = data.weather.current.temp_c;
+
+                        // Вставляем полученные данные о погоде в нужное место на странице
+                        $('#weather-container').html('Погода в Астане: ' + temperature + '°C, ' + description);
+                    },
+                    error: function() {
+                        // Обработка ошибок, если не удалось получить данные о погоде
+                        $('#weather-container').html('Не удалось загрузить данные о погоде.');
+                    }
+                });
+            });
+        </script>
+
+</head>
+<body>
+    <div id="weather-container">Загрузка данных о погоде...</div>
+</body>
+</html>
