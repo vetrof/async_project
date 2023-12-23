@@ -29,6 +29,18 @@ async def main():
         tasks.append(task)
         task = fetch_url(session, 'https://api.sampleapis.com/coffee/hot', queue)
         tasks.append(task)
+        task = fetch_url(session, 'https://api.sampleapis.com/presidents', queue)
+        tasks.append(task)
+        task = fetch_url(session, 'https://api.sampleapis.com/beers', queue)
+        tasks.append(task)
+        task = fetch_url(session, 'https://api.sampleapis.com/typer', queue)
+        tasks.append(task)
+        task = fetch_url(session, 'https://api.sampleapis.com/cartoons', queue)
+        tasks.append(task)
+        task = fetch_url(session, 'https://api.sampleapis.com/jokes', queue)
+        tasks.append(task)
+        task = fetch_url(session, 'https://api.sampleapis.com/avatar', queue)
+        tasks.append(task)
         await asyncio.gather(*tasks)
         print(queue)
 
@@ -45,8 +57,6 @@ async def main():
 
 
 asyncio.run(main())
-
-
 
 end_time = time.time()
 work_time = round(end_time - start_time, 1)

@@ -5,13 +5,13 @@ import time
 
 
 def home(request):
-    weather = {}
+    games = {}
 
     if request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
-        weather = requests.get('https://feelweather.click/api/astana').json()
-        return JsonResponse({'weather': weather})
+        games = requests.get('https://api.sampleapis.com/switch/games').json()
+        return JsonResponse({'games': games})
 
-    return render(request, 'weather_ajax_get_data.html', {'weather': weather})
+    return render(request, 'weather_ajax_get_data.html', {'games': games})
 
 
 def home2(request):

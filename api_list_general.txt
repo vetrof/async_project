@@ -1,0 +1,10 @@
+https://api.sampleapis.com/futurama/info
+https://www.cbr-xml-daily.ru/latest.js
+https://api.sampleapis.com/coffee/hot
+https://api.publicapis.org/entries
+https://api.coindesk.com/v1/bpi/currentprice.json
+https://www.boredapi.com/api/activity
+https://api.nationalize.io/?name=nathaniel
+https://datausa.io/api/data?drilldowns=Nation&measures=Population
+https://randomuser.me/api/
+https://api.zippopotam.us/us/33162
